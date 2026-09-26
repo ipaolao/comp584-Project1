@@ -47,9 +47,8 @@
             line-height: inherit;
         }
 
-        /* Universal styles for links and buttons */
+        /* Interactive buttons and links*/
         a { color: #229efd; font-weight: bold; }
-        a:hover { color: #fd6350; text-decoration: none; }
         a.button { transition: all 0.2s ease; }
         a.button:hover {
             background-color: #fd6350 !important;
@@ -57,13 +56,12 @@
             transform: translateY(-10px);
         }
 
-         /* Interactive elements */
+         /* Interactive elements*/
         
         input { display: none; }
         label { cursor: pointer; background-color: #d8e8f5; color: #14304d;}
         .slide { display: none; background-color: #d8e8f5; padding: 20px; margin-top: 20px;}
-        #slide1:checked + label, #slide2:checked + label, #slide3:checked + label {
-         color: #fd4400;}
+        #slide1:checked + label, #slide2:checked + label, #slide3:checked + label { color: #fd4400;}
         #slide1:checked ~ .slides .s1 { display: block; }
         #slide2:checked ~ .slides .s2 { display: block; }
         #slide3:checked ~ .slides .s3 { display: block; }
@@ -73,17 +71,9 @@
         @media screen and (max-width: 600px) {
             .mobile { width: 100% !important; }
             .block { display: block !important; width: 100% !important; }
+            .detail-row { display: block; }
         }
 
-        /* CSS Animation */
-       
-        @keyframes fadeIn {
-            from { opacity: 0; transform: scale(0.8); }
-            to { opacity: 1; transform: scale(1); }
-        }
-
-        .fade1 { animation: 1s 1 fadeIn; }
-        
         /* Visual details*/ 
         .detail-row {
             display: flex;
@@ -98,14 +88,17 @@
             background-color: #14304d;
             color: #ffffff;
         }
-
-        @media screen and (max-width: 600px) {
-            .detail-row {
-                display: block;
-            }
+       
+        /* CSS Animation */
+       
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.8); }
+            to { opacity: 1; transform: scale(1); }
+            
         }
 
-       
+        .fade1 { animation: 1s 1 fadeIn; }
+        
     </style>
 </head>
 
