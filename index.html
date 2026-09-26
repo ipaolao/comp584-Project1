@@ -57,14 +57,18 @@
             transform: translateY(-10px);
         }
 
-        /* Interactive elements */
+         /* Interactive elements */
         
         input { display: none; }
-        label { cursor: pointer; }
-        .slide { display: none; }
+        label { cursor: pointer; background-color: #d8e8f5; color: #14304d;}
+        .slide { display: none; background-color: #d8e8f5; padding: 20px; margin-top: 20px;}
+        #slide1:checked + label, #slide2:checked + label, #slide3:checked + label {
+         color: #fd4400;}
         #slide1:checked ~ .slides .s1 { display: block; }
         #slide2:checked ~ .slides .s2 { display: block; }
-
+        #slide3:checked ~ .slides .s3 { display: block; }
+        
+        
         /* Responsive styles */
         @media screen and (max-width: 600px) {
             .mobile { width: 100% !important; }
@@ -101,7 +105,7 @@
             }
         }
 
-
+       
     </style>
 </head>
 
@@ -227,6 +231,54 @@
                           </td>
                         </tr>
                     </table>
+
+    <!-- Radio buttons --> 
+    <div style="text-align: center; margin: 0px 20px; padding-bottom: 60px">
+
+        <h2 style="font-size: 23px; margin: 0 0 20px 0;">
+            Adoption Guide
+        </h2>
+
+        <input type="radio" name="guide" id="slide1">
+        <label for="slide1"
+            style="padding: 8px 14px; margin: 4px; border: 1px solid #cfe0f2; border-radius: 4px;">
+            Find the Right Match
+        </label>
+
+        <input type="radio" name="guide" id="slide2">
+        <label for="slide2"
+           style="padding: 8px 14px; margin: 4px; border: 1px solid #cfe0f2; border-radius: 4px;">
+            Preparing Your Home
+        </label>
+
+        <input type="radio" name="guide" id="slide3">
+        <label for="slide3"
+           style="padding: 8px 14px; margin: 4px; border: 1px solid #cfe0f2; border-radius: 4px;">
+            After Adoption
+        </label>
+
+        <input type="radio" name="guide" id="slide1">
+
+            <div class="slides">
+            <div class="slide s1" style="margin-top: 20px;">
+                Think about your daily routine, living space, and activity level
+                when choosing an animal that fits your lifestyle. All pets are beautiful, but 
+                some may require more time and care than you are prepared to give.
+                You can ask the shelter staff for advice on which pet is right for you.
+            </div>
+
+            <div class="slide s2" style="margin-top: 20px;">
+                You should also have a designated area where your new pet can eat and rest comfortably. 
+                Make sure to have the necessary supplies, such as food, water, bedding, and toys.
+            </div>
+
+            <div class="slide s3" style="margin-top: 20px;">
+                Create a simple routine for your new pet to prevent frightening them 
+                in a new environment. If necessary, provide your new pet time to 
+                build trust with you. It may take a few days for your new pet to adjust to their new home.
+            </div>
+        </div>
+    </div>
     <!-- CONTACT -->
         <div style="margin: auto; padding: 0 10px; text-align: center;">
              
